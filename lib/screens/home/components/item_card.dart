@@ -31,7 +31,8 @@ class ItemCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Hero(
-                tag: "${product.id}",
+                tag:
+                    "${product.price}", // Hero는 다른 페이지에도 같은 에니메이션을 띄우고 싶을때 씁니다. 그래서 tag가 고유값을 가져야하는듯?->product price를 수정함.
                 child: Image.asset(product.image),
               ),
             ),
@@ -45,7 +46,7 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           Text(
-            "\$${product.price}",
+            "${product.type}", // "\$${product.price}",
             style: TextStyle(fontWeight: FontWeight.bold),
           )
         ],

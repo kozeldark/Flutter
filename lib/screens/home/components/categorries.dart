@@ -10,9 +10,10 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["MP4", "GIF"];
+  List<String> categories = ["Template"]; //[MP4,GIF]
   // By default our first item will be selected
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -48,9 +49,10 @@ class _CategoriesState extends State<Categories> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: kDefaultPaddin / 4), //top padding 5
+              //choose template 아래 줄 UI
+              margin: EdgeInsets.only(top: 5), //top padding 5
               height: 2,
-              width: 30,
+              width: 62, //30에서 수정
               color: selectedIndex == index ? Colors.black : Colors.transparent,
             )
           ],
