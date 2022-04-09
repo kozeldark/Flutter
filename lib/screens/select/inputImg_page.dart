@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:shop_app/screens/select/audio_page.dart';
 import 'package:shop_app/screens/select/result_page.dart';
 import 'package:shop_app/screens/learning/file_picker_service.dart';
 import 'package:shop_app/screens/learning/ml_service.dart';
@@ -70,7 +71,8 @@ class _RemindPageState extends State<RemindPage> {
               onPressed: () {
                 // 눌렀을 때 Result route로 이동합니다.
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Result()));
+                    // MaterialPageRoute(builder: (context) => Result()));
+                    MaterialPageRoute(builder: (context) => AudioHomePage()),);
               },
             ),
             /*
