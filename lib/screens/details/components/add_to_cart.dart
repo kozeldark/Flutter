@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/select/inputImg_page.dart';
 
 import '../../../constants.dart';
 
@@ -43,7 +44,10 @@ class AddToCart extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
                 color: product.color,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RemindPage()));
+                  },
                 child: Text(
                   "Choose".toUpperCase(),
                   style: TextStyle(
