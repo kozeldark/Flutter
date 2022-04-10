@@ -19,6 +19,7 @@ class AddToCart extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin),
       child: Row(
         children: <Widget>[
+          /*
           Container(
             margin: EdgeInsets.only(right: kDefaultPaddin),
             height: 50,
@@ -29,6 +30,7 @@ class AddToCart extends StatelessWidget {
                 color: product.color,
               ),
             ),
+          
             child: IconButton(
               icon: SvgPicture.asset(
                 "assets/icons/add_to_cart.svg",
@@ -37,6 +39,9 @@ class AddToCart extends StatelessWidget {
               onPressed: () {},
             ),
           ),
+          */
+          SizedBox(height: 100), //"CHOOSE" 버튼과 gif이미지 사이의 간격구현
+
           Expanded(
             child: SizedBox(
               height: 50,
@@ -46,8 +51,8 @@ class AddToCart extends StatelessWidget {
                 color: product.color,
                 onPressed: () {
                   Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RemindPage()));
-                  },
+                      MaterialPageRoute(builder: (context) => RemindPage()));
+                },
                 child: Text(
                   "Choose".toUpperCase(),
                   style: TextStyle(

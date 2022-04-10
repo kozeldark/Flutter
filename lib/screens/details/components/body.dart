@@ -42,14 +42,15 @@ class Body extends StatelessWidget {
                     children: <Widget>[
                       ColorAndSize(product: product),
                       SizedBox(height: kDefaultPaddin / 2),
-                      Description(product: product),
+                      //Description(product: product),
                       SizedBox(height: kDefaultPaddin / 2),
-                      CounterWithFavBtn(),
+                      //CounterWithFavBtn(),
                       SizedBox(height: kDefaultPaddin / 2),
                       AddToCart(product: product)
                     ],
                   ),
                 ),
+                //AddToCart(product: product),
                 ProductTitleWithImage(product: product)
               ],
             ),
