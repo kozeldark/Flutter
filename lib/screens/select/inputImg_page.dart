@@ -10,13 +10,15 @@ class RemindPage extends StatefulWidget {
   @override
   _RemindPageState createState() => _RemindPageState();
 }
-class ReturnValue{
+
+class ReturnValue {
   String result;
   ReturnValue({this.result});
 }
+
 // 데이터 전달에 사용할 클래스
 class Arguments {
-  Uint8List arg;   // 전달에 사용할 데이터
+  Uint8List arg; // 전달에 사용할 데이터
   ReturnValue returnValue; //반환때 사용할 클래스
   Arguments({this.arg: null, this.returnValue});
 }
@@ -32,7 +34,7 @@ class _RemindPageState extends State<RemindPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Color(0xFF356C95),
         title: Text('Re:mind', style: TextStyle(color: Colors.white)),
         centerTitle: true,
         elevation: 0.0,
@@ -67,12 +69,14 @@ class _RemindPageState extends State<RemindPage> {
             IconButton(
               icon: Icon(Icons.keyboard_arrow_down),
               iconSize: 80,
-              color: Colors.amberAccent[700],
+              color: Color(0xFF356C95),
               onPressed: () {
                 // 눌렀을 때 Result route로 이동합니다.
-                Navigator.push(context,
-                    // MaterialPageRoute(builder: (context) => Result()));
-                    MaterialPageRoute(builder: (context) => AudioHomePage()),);
+                Navigator.push(
+                  context,
+                  // MaterialPageRoute(builder: (context) => Result()));
+                  MaterialPageRoute(builder: (context) => AudioHomePage()),
+                );
               },
             ),
             /*
