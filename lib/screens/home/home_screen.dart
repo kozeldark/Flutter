@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/home/components/body.dart';
+import 'package:re_mind/constants.dart';
+import 'package:re_mind/screens/home/components/body.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key key, this.user}) : super(key: key);
+  static const routeName = '/home';
+  final User user;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body(),
     );
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(context) {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -35,7 +40,9 @@ class HomeScreen extends StatelessWidget {
             // By default our  icon color is white
             color: kTextColor,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/profile', arguments: user);
+          },
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],

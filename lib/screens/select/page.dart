@@ -1,7 +1,7 @@
 import 'dart:typed_data';
 
-import 'package:shop_app/screens/learning/file_picker_service.dart';
-import 'package:shop_app/screens/learning/ml_service.dart';
+import 'package:re_mind/screens/learning/file_picker_service.dart';
+import 'package:re_mind/screens/learning/ml_service.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
