@@ -1,9 +1,9 @@
 import 'dart:typed_data';
 
-import 'package:shop_app/screens/select/audio_page.dart';
-import 'package:shop_app/screens/select/result_page.dart';
-import 'package:shop_app/screens/learning/file_picker_service.dart';
-import 'package:shop_app/screens/learning/ml_service.dart';
+import 'package:re_mind/screens/select/audio_page.dart';
+import 'package:re_mind/screens/select/result_page.dart';
+import 'package:re_mind/screens/learning/file_picker_service.dart';
+import 'package:re_mind/screens/learning/ml_service.dart';
 import 'package:flutter/material.dart';
 
 class RemindPage extends StatefulWidget {

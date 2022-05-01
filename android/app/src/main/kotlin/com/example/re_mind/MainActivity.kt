@@ -1,4 +1,4 @@
-package com.example.shop_app
+package com.example.re_mind
 
 import io.flutter.embedding.android.FlutterActivity
 

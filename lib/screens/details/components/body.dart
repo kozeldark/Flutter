@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/models/Product.dart';
+import 'package:re_mind/constants.dart';
+import 'package:re_mind/models/Product.dart';
 
 import 'add_to_cart.dart';
 import 'color_and_size.dart';
