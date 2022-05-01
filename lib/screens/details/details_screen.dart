@@ -28,7 +28,8 @@ class DetailsScreen extends StatelessWidget {
           color: Colors.white,
         ),
         onPressed: () => Navigator.pop(context),
-      ),
+      )
+        /*
       actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset("assets/icons/search.svg"),
@@ -40,6 +41,8 @@ class DetailsScreen extends StatelessWidget {
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],
+      */
+
     );
   }
 }

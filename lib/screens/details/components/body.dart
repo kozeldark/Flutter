@@ -24,18 +24,18 @@ class Body extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(top: size.height * 0.3),
+                  margin: EdgeInsets.only(top: size.height * 0.08),
                   padding: EdgeInsets.only(
-                    top: size.height * 0.12,
+                    top: size.height * 0.5,
                     left: kDefaultPaddin,
                     right: kDefaultPaddin,
                   ),
                   // height: 500,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Color(0xFFF6EEAE),
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24),
-                      topRight: Radius.circular(24),
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
                     ),
                   ),
                   child: Column(

@@ -105,7 +105,7 @@ class ChooseTemplate extends StatelessWidget {
             Center(
               //템플릿 3임시 이미지mp4여야 하는데 gif로 넣기
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/sample1.gif'),
+                backgroundImage: AssetImage('assets/sample3.gif'),
                 radius: 70.0,
               ),
             ),

@@ -30,6 +30,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: kDefaultPaddin * 2),
+
           Row(
             children: <Widget>[
               /*
@@ -46,7 +47,7 @@ class ProductTitleWithImage extends StatelessWidget {
                 ),
                   ),
               */
-              SizedBox(width: kDefaultPaddin / 2),
+              SizedBox(width: kDefaultPaddin * 2),
               Expanded(
                 child: Hero(
                   tag: "${product.id}",

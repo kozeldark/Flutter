@@ -9,17 +9,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      backgroundColor: Color(0xFFF6EEAE),
     );
   }
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFF6EEAE),
       elevation: 0,
       leading: IconButton(
         icon: SvgPicture.asset("assets/icons/back.svg"),
         onPressed: () {},
-      ),
+      )
+      /*
       actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset(
@@ -39,6 +41,8 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],
+
+       */
     );
   }
 }
