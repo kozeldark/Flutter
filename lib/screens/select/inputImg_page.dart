@@ -6,22 +6,15 @@ import 'package:re_mind/screens/learning/file_picker_service.dart';
 import 'package:re_mind/screens/learning/ml_service.dart';
 import 'package:flutter/material.dart';
 
+// 이미지 넣는 페이지
 class RemindPage extends StatefulWidget {
+  final int arguments;
+  const RemindPage(this.arguments);
+
   @override
   _RemindPageState createState() => _RemindPageState();
 }
 
-class ReturnValue {
-  String result;
-  ReturnValue({this.result});
-}
-
-// 데이터 전달에 사용할 클래스
-class Arguments {
-  Uint8List arg; // 전달에 사용할 데이터
-  ReturnValue returnValue; //반환때 사용할 클래스
-  Arguments({this.arg: null, this.returnValue});
-}
 
 class _RemindPageState extends State<RemindPage> {
   MLService _mlService = MLService();
@@ -79,8 +72,17 @@ class _RemindPageState extends State<RemindPage> {
                 );
               },
             ),
+            IconButton(
+              icon: Icon(Icons.add_to_photos),
+              iconSize: 80,
+              onPressed:(){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Result()),
+                );
+              },
+            ),
             /*
-
             Icon(
               //아래화살표
               Icons.keyboard_arrow_down,
@@ -153,15 +155,15 @@ class _RemindPageState extends State<RemindPage> {
         defaultImage = imageData;
       });
 
-      // var cartoonImageData = await _mlService.convertCartoonImage(imageData);
-      //
-      // setState(() {
-      //   if (cartoonImageData == null) {
-      //     cartoonImage = null;
-      //   } else {
-      //     cartoonImage = cartoonImageData;
-      //   }
-      // });
+      var cartoonImageData = await _mlService.convertCartoonImage(imageData, widget.arguments);
+
+      setState(() {
+        if (cartoonImageData == null) {
+          cartoonImage = null;
+        } else {
+          cartoonImage = cartoonImageData;
+        }
+      });
     } else {
       setState(() {
         defaultImage = null;

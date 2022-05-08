@@ -1,18 +1,35 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:re_mind/models/Product.dart';
 import 'package:re_mind/screens/select/inputImg_page.dart';
 
 import '../../../constants.dart';
+import '../../learning/ml_service.dart';
+
+// 템플릿 선택 페이지
+
+// 데이터 전달(템플릿 번호)에 사용할 클래스
+class Arguments {
+  int arg;   // 전달에 사용할 데이터
+  ReturnValue returnValue; //반환때 사용할 클래스
+  Arguments({this.arg: null, this.returnValue});
+}
+
+class ReturnValue {
+  String result;
+  ReturnValue({this.result});
+}
 
 class AddToCart extends StatelessWidget {
-  const AddToCart({
+  AddToCart({
     Key key,
     @required this.product,
   }) : super(key: key);
 
   final Product product;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,7 +47,7 @@ class AddToCart extends StatelessWidget {
                 color: product.color,
               ),
             ),
-          
+
             child: IconButton(
               icon: SvgPicture.asset(
                 "assets/icons/add_to_cart.svg",
@@ -50,8 +67,9 @@ class AddToCart extends StatelessWidget {
                     borderRadius: BorderRadius.circular(18)),
                 color: product.color,
                 onPressed: () {
+                  Fluttertoast.showToast(msg: this.product.id.toString());
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => RemindPage()));
+                      MaterialPageRoute(builder: (context) => RemindPage(this.product.id)));
                 },
                 child: Text(
                   "Choose".toUpperCase(),
