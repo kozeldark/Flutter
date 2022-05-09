@@ -36,7 +36,7 @@ class AudioHome extends State<AudioHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFF4ECAC),
       body: Stack(
         children: <Widget>[
           // Image.asset("assets/images/photo.png", fit: BoxFit.contain),
@@ -106,6 +106,7 @@ class AudioHome extends State<AudioHomePage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xFFC163EE),
         child: Icon(Icons.audiotrack),
         onPressed: () async {
 

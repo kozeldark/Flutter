@@ -82,8 +82,10 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFFE5C2F5),
         title: Text('Result Video'),
       ),
+      backgroundColor: Color(0xFFF4ECAC),
       // VideoPlayerController가 초기화를 진행하는 동안 로딩 스피너를 보여주기 위해
       // FutureBuilder를 사용합니다.
       body: FutureBuilder(
@@ -105,6 +107,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
         },
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xFFC163EE),
         onPressed: () {
           // 재생/일시 중지 기능을 `setState` 호출로 감쌉니다. 이렇게 함으로써 올바른 아이콘이
           // 보여집니다.

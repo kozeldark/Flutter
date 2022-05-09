@@ -27,8 +27,8 @@ class _RemindPageState extends State<RemindPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF356C95),
-        title: Text('Re:mind', style: TextStyle(color: Colors.white)),
+        backgroundColor: Color(0xFFE5C2F5),
+        title: Text('Re:mind', style: TextStyle(color: Color(0xFF474745))),
         centerTitle: true,
         elevation: 0.0,
         actions: [
@@ -38,6 +38,7 @@ class _RemindPageState extends State<RemindPage> {
           )
         ],
       ),
+      backgroundColor: Color(0xFFF5EDAD),
       body: SingleChildScrollView(
         padding: EdgeInsets.fromLTRB(20.0, 40.0, 0.0, 0.0),
         child: Column(
@@ -53,16 +54,16 @@ class _RemindPageState extends State<RemindPage> {
               ),
             ),
             SizedBox(
-              height: 40.0, //간격
+              height: 60.0, //간격
             ),
             LoadingImage(defaultImage), //처음 Input 이미지
             SizedBox(
-              height: 80.0, //간격
+              height: 100.0, //간격
             ),
             IconButton(
               icon: Icon(Icons.keyboard_arrow_down),
               iconSize: 80,
-              color: Color(0xFF356C95),
+              color: Color(0xFFC163EE),
               onPressed: () {
                 // 눌렀을 때 Result route로 이동합니다.
                 Navigator.push(
