@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         icon: SvgPicture.asset("assets/icons/back.svg"),
         onPressed: () {},
       )
-      /*
+
       actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset(
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
         SizedBox(width: kDefaultPaddin / 2)
       ],
 
-       */
+
     );
   }
 }
