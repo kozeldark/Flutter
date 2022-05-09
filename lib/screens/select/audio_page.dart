@@ -3,17 +3,21 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:re_mind/screens/select/result_page.dart';
+
+import '../learning/ml_service.dart';
 class AudioHomePage extends StatefulWidget{
   @override
   AudioHome createState() => AudioHome();
 }
 
 class AudioHome extends State<AudioHomePage> {
+  LipService _lipService = LipService();
   AudioPlayer _audioPlayer = AudioPlayer();
   bool isPlaying = false;
   String currentTime = "00:00";
   String completeTime = "00:00";
-
+  String filePath;
   @override
   void initState() {
     // TODO: implement initState
@@ -97,12 +101,24 @@ class AudioHome extends State<AudioHomePage> {
                 Text(" | "),
 
                 Text(completeTime, style: TextStyle(fontWeight: FontWeight.w300),),
-
-
-
               ],
             ),
           ),
+          Container(
+            margin:EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.85,
+                left: MediaQuery.of(context).size.width * 0.4),
+            child: OutlinedButton(
+              onPressed: () async {
+                var cartoonImageData = await _lipService.convertCartoonImage(filePath);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Result()),
+                );
+              },
+              child: Text("Make video"),
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -111,7 +127,6 @@ class AudioHome extends State<AudioHomePage> {
         onPressed: () async {
 
           FilePickerResult result = await FilePicker.platform.pickFiles();
-          String filePath;
           if (result != null) {
           //   File file = File(result.files.single.path);
             filePath = await result.files.single.path;
