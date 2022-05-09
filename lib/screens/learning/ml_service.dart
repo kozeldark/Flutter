@@ -31,6 +31,25 @@ class MLService {
       return null;
     }
   }
-
 }
 
+class LipService {
+  Dio dio = Dio();
+
+  // ml server
+  // https://github.com/PuzzleLeaf/tensorflow_flask_api_server
+  Future<Uint8List> convertCartoonImage(String audioPath) async {
+    try {
+      Response response = await dio.post('http://10.0.2.2:5000/lip',
+          data: {
+            'audio': audioPath
+          }
+      );
+
+      String result = response.data;
+      return compute(base64Decode, result);
+    } catch (e) {
+      return null;
+    }
+  }
+}
