@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:re_mind/constants.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key key, this.user}) : super(key: key);
@@ -46,6 +47,7 @@ class ProfilePage extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.all(10),
+        color: Color(0xFFF6EEAE),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -61,7 +63,10 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Profile'),),
+      backgroundColor: Color(0xFFF6EEAE),
+      appBar: AppBar(title: Text('Profile',
+        style: TextStyle(color: Color(0xFF4D4C46)) , ) ,
+        backgroundColor: Color(0xFFE5C2F5),),
       body: _buildBody(context),
     );
   }
