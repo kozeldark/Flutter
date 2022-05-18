@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:re_mind/models/Product.dart';
-import 'package:re_mind/screens/select/inputImg_page.dart';
+import 'package:re_mind/screens/select/inputImg_gif_page.dart';
 
 import '../../../constants.dart';
 import '../../learning/ml_service.dart';
+import '../../select/inputImg_mp4_page.dart';
 
 // 템플릿 선택 페이지
 
@@ -70,8 +71,20 @@ class AddToCart extends StatelessWidget {
                 color: product.color,
                 onPressed: () {
                   Fluttertoast.showToast(msg: this.product.id.toString());
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => RemindPage(this.product.id)));
+                  String check = this.product.type.toString();
+
+                  if (check == 'GIF') {
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context) => RemindPageGif(this.product
+                                .id)));
+                  }
+                  else {
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context) => RemindPage(this.product
+                                .id)));
+                  }
                 },
                 child: Text(
                   "Choose".toUpperCase(),

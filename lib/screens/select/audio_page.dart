@@ -52,7 +52,7 @@ class AudioHome extends State<AudioHomePage> {
           ),),
           Container(
             width: MediaQuery.of(context).size.width * 0.8,
-            height: 80,
+            height: 40,
             margin: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.7,
                 left: MediaQuery.of(context).size.width * 0.1),
@@ -104,6 +104,25 @@ class AudioHome extends State<AudioHomePage> {
               ],
             ),
           ),
+
+          Container(
+            margin:EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.8,
+                left: MediaQuery.of(context).size.width * 0.375),
+            child: IconButton(
+              icon: Icon(Icons.task_alt),
+              iconSize: 80,
+              onPressed:() async {
+                var cartoonImageData = await _lipService.convertCartoonImage(filePath);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Result()),
+                );
+              },
+            ),
+          )
+
+          /*
           Container(
             margin:EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.85,
@@ -113,12 +132,15 @@ class AudioHome extends State<AudioHomePage> {
                 var cartoonImageData = await _lipService.convertCartoonImage(filePath);
                 Navigator.push(
                   context,
+
                   MaterialPageRoute(builder: (context) => Result()),
                 );
               },
               child: Text("Make video"),
             ),
           )
+          */
+
         ],
       ),
       floatingActionButton: FloatingActionButton(

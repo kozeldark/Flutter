@@ -32,10 +32,12 @@ class _RemindPageState extends State<RemindPage> {
         centerTitle: true,
         elevation: 0.0,
         actions: [
+          /*
           IconButton(
             icon: Icon(Icons.image),
             onPressed: selectImage,
           )
+           */
         ],
       ),
       backgroundColor: Color(0xFFF5EDAD),
@@ -58,10 +60,18 @@ class _RemindPageState extends State<RemindPage> {
             ),
             LoadingImage(defaultImage), //처음 Input 이미지
             SizedBox(
-              height: 100.0, //간격
+              height: 60.0, //간격
             ),
+
             IconButton(
-              icon: Icon(Icons.keyboard_arrow_down),
+              icon: Icon(Icons.image),
+              onPressed: selectImage,
+              iconSize: 80,
+              color: Color(0xFFC163EE),
+            ),
+
+            IconButton(
+              icon: Icon(Icons.library_music),
               iconSize: 80,
               color: Color(0xFFC163EE),
               onPressed: () {
@@ -70,16 +80,6 @@ class _RemindPageState extends State<RemindPage> {
                   context,
                   // MaterialPageRoute(builder: (context) => Result()));
                   MaterialPageRoute(builder: (context) => AudioHomePage()),
-                );
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.add_to_photos),
-              iconSize: 80,
-              onPressed:(){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Result()),
                 );
               },
             ),
