@@ -3,7 +3,9 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:re_mind/screens/methods/toast.dart';
 import 'package:re_mind/screens/select/result_page.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../learning/ml_service.dart';
 class AudioHomePage extends StatefulWidget{
@@ -18,6 +20,8 @@ class AudioHome extends State<AudioHomePage> {
   String currentTime = "00:00";
   String completeTime = "00:00";
   String filePath;
+  bool isReady = false;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -35,6 +39,14 @@ class AudioHome extends State<AudioHomePage> {
       });
     });
 
+  }
+
+  void showToast(String message) {
+    Fluttertoast.showToast(msg: message,
+        backgroundColor: Colors.grey,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM
+    );
   }
 
   @override
@@ -109,6 +121,8 @@ class AudioHome extends State<AudioHomePage> {
             margin:EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.8,
                 left: MediaQuery.of(context).size.width * 0.375),
+
+            /* 기존에 추가한 버튼인데
             child: IconButton(
               icon: Icon(Icons.task_alt),
               iconSize: 80,
@@ -118,6 +132,26 @@ class AudioHome extends State<AudioHomePage> {
                   context,
                   MaterialPageRoute(builder: (context) => Result()),
                 );
+              },
+            ),
+             */
+
+
+            child: IconButton(
+              icon: Icon(Icons.task_alt),
+              iconSize: 80,
+              onPressed:() {
+                if (isReady == true) {
+                  var cartoonImageData = _lipService.convertCartoonImage(
+                      filePath);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Result()),
+                  );
+                }
+                else {
+                  showToast("Input your audio file !");
+                }
               },
             ),
           )
@@ -159,6 +193,7 @@ class AudioHome extends State<AudioHomePage> {
 
           // String filePath = await FilePicker.getFilePath();
           int status = await _audioPlayer.play(filePath, isLocal: true);
+          isReady = true;
 
           if (status == 1) {
             setState(() {

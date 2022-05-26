@@ -5,6 +5,7 @@ import 'package:re_mind/screens/select/result_page.dart';
 import 'package:re_mind/screens/learning/file_picker_service.dart';
 import 'package:re_mind/screens/learning/ml_service.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 // 이미지 넣는 페이지
 class RemindPageGif extends StatefulWidget {
@@ -15,13 +16,22 @@ class RemindPageGif extends StatefulWidget {
   _RemindPageState createState() => _RemindPageState();
 }
 
-
 class _RemindPageState extends State<RemindPageGif> {
   MLService _mlService = MLService();
   FilePickerService _filePickerService = FilePickerService();
 
   Uint8List defaultImage;
   Uint8List cartoonImage;
+
+  bool isReady = false;
+
+  void showToast(String message) {
+    Fluttertoast.showToast(msg: message,
+        backgroundColor: Colors.grey,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,10 +84,15 @@ class _RemindPageState extends State<RemindPageGif> {
               icon: Icon(Icons.task_alt),
               iconSize: 80,
               onPressed:(){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Result()),
-                );
+                if (isReady == true) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Result()),
+                  );
+                }
+                else {
+                  showToast("Input your image file !");
+                }
               },
             ),
             /*
@@ -162,6 +177,8 @@ class _RemindPageState extends State<RemindPageGif> {
           cartoonImage = cartoonImageData;
         }
       });
+      isReady = true;
+
     } else {
       setState(() {
         defaultImage = null;
