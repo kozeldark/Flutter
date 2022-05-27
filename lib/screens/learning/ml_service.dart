@@ -3,12 +3,12 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'dart:io';
 
 class MLService {
   Dio dio = Dio();
 
   // ml server
-  // https://github.com/PuzzleLeaf/tensorflow_flask_api_server
   Future<Uint8List> convertCartoonImage (Uint8List imageData, int templeteData) async {
     try {
       var encodedData = await compute(base64Encode, imageData);
@@ -17,7 +17,6 @@ class MLService {
 //          'image': encodedData
 //        }
 //      );
-      //http://localhost:5000/v1/image/convert_cartoon
       Response response = await dio.post('http://10.0.2.2:5000/face_swap',
           data: {
             'image': encodedData,
@@ -37,12 +36,12 @@ class LipService {
   Dio dio = Dio();
 
   // ml server
-  // https://github.com/PuzzleLeaf/tensorflow_flask_api_server
   Future<Uint8List> convertCartoonImage(String audioPath) async {
     try {
+      File file = new File(audioPath);
       Response response = await dio.post('http://10.0.2.2:5000/lip',
           data: {
-            'audio': audioPath
+            'audio': file
           }
       );
 
