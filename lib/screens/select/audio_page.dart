@@ -4,7 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:re_mind/screens/methods/toast.dart';
-import 'package:re_mind/screens/select/result_page.dart';
+import 'package:re_mind/screens/select/wav2_result_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../learning/ml_service.dart';
@@ -146,7 +146,7 @@ class AudioHome extends State<AudioHomePage> {
                       filePath);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Result()),
+                    MaterialPageRoute(builder: (context) => Wav2_Result()),
                   );
                 }
                 else {
