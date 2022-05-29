@@ -9,11 +9,16 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import '../learning/ml_service.dart';
 class AudioHomePage extends StatefulWidget{
+  final int arguments;
+  final defaultImage;
+  const AudioHomePage(this.defaultImage, this.arguments);
   @override
+
   AudioHome createState() => AudioHome();
 }
 
 class AudioHome extends State<AudioHomePage> {
+  MLService _mlService = MLService();
   LipService _lipService = LipService();
   AudioPlayer _audioPlayer = AudioPlayer();
   bool isPlaying = false;
@@ -142,8 +147,8 @@ class AudioHome extends State<AudioHomePage> {
               iconSize: 80,
               onPressed:() {
                 if (isReady == true) {
-                  var cartoonImageData = _lipService.convertCartoonImage(
-                      filePath);
+                  //_mlService.convertCartoonImage(widget.defaultImage, widget.arguments);
+                  _lipService.convertCartoonImage(widget.defaultImage, widget.arguments, filePath);
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Wav2_Result()),

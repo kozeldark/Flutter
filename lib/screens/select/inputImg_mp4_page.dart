@@ -79,7 +79,8 @@ class _RemindPageState extends State<RemindPage> {
                 Navigator.push(
                   context,
                   // MaterialPageRoute(builder: (context) => Result()));
-                  MaterialPageRoute(builder: (context) => AudioHomePage()),
+                  MaterialPageRoute(builder: (context) =>
+                      AudioHomePage(defaultImage, widget.arguments)),
                 );
               },
             ),
@@ -154,21 +155,6 @@ class _RemindPageState extends State<RemindPage> {
     if (imageData != null) {
       setState(() {
         defaultImage = imageData;
-      });
-
-      var cartoonImageData = await _mlService.convertCartoonImage(imageData, widget.arguments);
-
-      setState(() {
-        if (cartoonImageData == null) {
-          cartoonImage = null;
-        } else {
-          cartoonImage = cartoonImageData;
-        }
-      });
-    } else {
-      setState(() {
-        defaultImage = null;
-        cartoonImage = null;
       });
     }
   }

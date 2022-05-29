@@ -36,12 +36,18 @@ class LipService {
   Dio dio = Dio();
 
   // ml server
-  Future<Uint8List> convertCartoonImage(String audioPath) async {
+  Future<Uint8List> convertCartoonImage(Uint8List imageData, int templeteData, String audioPath) async {
     try {
+      print(audioPath);
       File file = new File(audioPath);
+      List<int> fileBytes = await file.readAsBytes();
+      String base64String = base64Encode(fileBytes);
+      var encodedData = await compute(base64Encode, imageData);
       Response response = await dio.post('http://10.0.2.2:5000/lip',
           data: {
-            'audio': file
+            'image': encodedData,
+            'templete': templeteData,
+            'audio': base64String
           }
       );
 
