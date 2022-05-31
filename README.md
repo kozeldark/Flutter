@@ -81,6 +81,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/demo.mp4
+    - assets/result_voice.mp4
 ```
 
 ***
