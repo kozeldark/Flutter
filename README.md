@@ -137,10 +137,10 @@ flutter:
 # 5. Role
 
 <table>
-<tr> <td>심우석(201636417)</td> <td>qkqh8639@gmail.com</td> <td>Lightweight, Flutter, Documentation</td> </tr>
-<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight, Documentation</td> </tr>
+<tr> <td>심우석(201636417)</td> <td>qkqh8639@gmail.com</td> <td>Lightweight(parameter optimization), Flutter, Documentation</td> </tr>
+<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight(parameter optimization),Flutter, Documentation</td> </tr>
 <tr> <td>김다혜(201835414)</td> <td>ekgp3987@naver.com</td> <td>Modeling, Flutter, Documentation</td> </tr>
-<tr> <td>선다혜(201835466)</td> <td>adad05011@gachon.ac.kr</td> <td>Modeling, LightWeight, Documentation</td> </tr>
+<tr> <td>선다혜(201835466)</td> <td>adad05011@gachon.ac.kr</td> <td>Modeling, LightWeight(parameter optimization), Documentation</td> </tr>
 </table>
 
 ***
