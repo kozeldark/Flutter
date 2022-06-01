@@ -4,7 +4,7 @@
 * Final Presentation PDF File - [Final Presentation.pdf](https://github.com/dntjr41/Graduation_project/files/8812206/default.pdf)
 * ### [Graduation Project Proposal(Youtube) - Re:Mind](https://youtu.be/V59beXzW11Y)
 * ### [Graduation Project Implementation(Youtube) - Re:Mind](https://youtu.be/JECVPx8Vpys)
-* ### [Graduation Project Final(Youtube) - Re:Mind](https://www.youtube.com/watch?v=KEYO8e3j9Ek)
+* ### [Graduation Project Final(Youtube) - Re:Mind](https://youtu.be/FncUGX2JdjE)
 
 ***
 * ### [Graduation Project Faceswap Demo - Re:Mind](https://user-images.githubusercontent.com/67234937/171354185-e338a558-b35a-47f2-a857-1a2178b18097.mp4)
@@ -151,7 +151,7 @@ flutter:
 
 <table>
 <tr> <td>심우석(201636417)</td> <td>qkqh8639@gmail.com</td> <td>Lightweight, Flutter, Documentation</td> </tr>
-<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight, Flutter, Documentation</td> </tr>
+<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight, Documentation</td> </tr>
 <tr> <td>김다혜(201835414)</td> <td>ekgp3987@naver.com</td> <td>Modeling, Flutter, Documentation</td> </tr>
 <tr> <td>선다혜(201835466)</td> <td>adad05011@gachon.ac.kr</td> <td>Modeling, LightWeight, Documentation</td> </tr>
 </table>
