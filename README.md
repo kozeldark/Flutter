@@ -3,7 +3,7 @@
 
 * ### [Graduation Project Proposal(Youtube) - Re:Mind](https://youtu.be/V59beXzW11Y)
 * ### [Graduation Project Implementation(Youtube) - Re:Mind](https://youtu.be/JECVPx8Vpys)
-* ### [Graduation Project Final(Youtube) - Re:Mind]()
+* ### [Graduation Project Final(Youtube) - Re:Mind](https://www.youtube.com/watch?v=KEYO8e3j9Ek)
 
 ***
 In order to use Re:Mind's Service, the Flask model must be installed in addition to the Flutter. <br>
@@ -81,7 +81,6 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/demo.mp4
-    - assets/result_voice.mp4
 ```
 
 ***
@@ -90,7 +89,8 @@ flutter:
 > [2. GIF (Without Audio)](#2-gif) <br>
 > [3. MP4 (With Audio)](#3-mp4) <br>
 > [4. Assets Management](#4-assets) <br>
-> [5. Role](#5-role) <br>
+> [5. Demo Video](#5-demo) <br>
+> [6. Role](#5-role) <br>
 
 ***
 # 1. Login & Profile Management
@@ -135,13 +135,19 @@ flutter:
 * If you want to change Template & UI related to Assets, please modify the dart file in the home folder - [Home Folder](https://github.com/kozeldark/Flutter/tree/main/lib/screens/home/components) <br> ![home](https://user-images.githubusercontent.com/67234937/171093911-ac6c4062-c219-4c14-bce1-773f98d93a23.png)
 
 ***
-# 5. Role
+# 5. Demo Video
+| GIF(Without Audio) | MP4(With Audio) |
+| ------------------ | --------------- |
+| https://user-images.githubusercontent.com/67234937/171351265-2f013a6e-5ee5-4cb3-ab93-6040c5d273dd.mp4 | https://user-images.githubusercontent.com/67234937/171351294-b8326a2a-9cfa-44c6-96f9-e11db400b593.mp4 |
+
+***
+# 6. Role
 
 <table>
-<tr> <td>심우석(201636417)</td> <td>qkqh8639@gmail.com</td> <td>Lightweight(parameter optimization), Flutter, Documentation</td> </tr>
-<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight(parameter optimization),Flutter, Documentation</td> </tr>
+<tr> <td>심우석(201636417)</td> <td>qkqh8639@gmail.com</td> <td>Lightweight, Flutter, Documentation</td> </tr>
+<tr> <td>오찬희(201735855)</td> <td>fasvvc@gmail.com</td> <td>Modeling, Lightweight, Documentation</td> </tr>
 <tr> <td>김다혜(201835414)</td> <td>ekgp3987@naver.com</td> <td>Modeling, Flutter, Documentation</td> </tr>
-<tr> <td>선다혜(201835466)</td> <td>adad05011@gachon.ac.kr</td> <td>Modeling, LightWeight(parameter optimization), Documentation</td> </tr>
+<tr> <td>선다혜(201835466)</td> <td>adad05011@gachon.ac.kr</td> <td>Modeling, LightWeight, Documentation</td> </tr>
 </table>
 
 ***
