@@ -1,6 +1,7 @@
 ### Graduation Project - Re:Mind [Flutter (Application)]
 ***
 
+* Final Presentation PDF File - [Final Presentation.pdf](https://github.com/dntjr41/Graduation_project/files/8812206/default.pdf)
 * ### [Graduation Project Proposal(Youtube) - Re:Mind](https://youtu.be/V59beXzW11Y)
 * ### [Graduation Project Implementation(Youtube) - Re:Mind](https://youtu.be/JECVPx8Vpys)
 * ### [Graduation Project Final(Youtube) - Re:Mind](https://www.youtube.com/watch?v=KEYO8e3j9Ek)
