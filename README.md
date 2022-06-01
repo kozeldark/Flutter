@@ -6,6 +6,11 @@
 * ### [Graduation Project Final(Youtube) - Re:Mind](https://www.youtube.com/watch?v=KEYO8e3j9Ek)
 
 ***
+* ### [Graduation Project Faceswap Demo - Re:Mind](https://user-images.githubusercontent.com/67234937/171354185-e338a558-b35a-47f2-a857-1a2178b18097.mp4)
+
+* ### [Graduation Project Faceswap + Wav2Lip Demo - Re:Mind](https://user-images.githubusercontent.com/67234937/171354197-1d87a611-b7cb-4564-b3c8-f05d83a45803.mp4)
+
+***
 In order to use Re:Mind's Service, the Flask model must be installed in addition to the Flutter. <br>
 Please go to the link and install the Flask Model. <br>
 [Re:Mind Flask Model Wiki Page](https://github.com/dntjr41/Graduation_project/wiki)
